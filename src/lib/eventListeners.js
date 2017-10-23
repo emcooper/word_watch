@@ -1,13 +1,11 @@
 const $ = require('jquery')
-const requests = require('./lib/requests')
+const handler = require('./handlers')
 
 module.exports = {breakdown}
 
-
-
 function breakdown(){
   $('button').on('click', function(){
-    var text = $('textarea').val()
-    console.log(text)
+    let text = $('textarea').val()
+    handler.appendWordBreakdown(text)
   })
 }

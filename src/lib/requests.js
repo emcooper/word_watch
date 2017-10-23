@@ -1,6 +1,6 @@
 module.exports = {getTopWord}
 const $ = require('jquery')
-const ajaxHandler = require('./ajaxHandlers')
+const handler = require('./handlers')
 
 const apiUrl = "https://wordwatch-api.herokuapp.com/api/v1"
 
@@ -9,6 +9,6 @@ function getTopWord(){
     url: apiUrl + '/top_word',
     type: 'GET',
   }).done(function(topWord) {
-    ajaxHandler.appendTopWord(topWord)
+    handler.appendTopWord(topWord)
   })
 }
