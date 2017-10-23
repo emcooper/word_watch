@@ -2,7 +2,7 @@ module.exports = {wordCounts}
 
 function wordCounts(text){
   let counts = {}
-  splitText = text.split(" ")
+  let splitText = text.split(" ")
   splitText.forEach(function(word){
     if(counts[word]) {
       counts[word] += 1

@@ -1,7 +1,6 @@
 module.exports = {getTopWord, postWords}
 const $ = require('jquery')
 const handler = require('./handlers')
-
 const apiUrl = "https://wordwatch-api.herokuapp.com/api/v1"
 
 function getTopWord(){
@@ -20,8 +19,6 @@ function postWords(text){
         url: apiUrl + '/words',
         type: 'POST',
         data: { word: { value: word } }
-      }).done(function(message) {
-        console.log(message)
-      })
+      }).done(function(message) {})
   })
 }

@@ -14,7 +14,7 @@ function breakdownButton(){
 
 function enterKey(){
   $("textarea").keypress(function(e){
-    var key = e.which
+    let key = e.which
     if(key === 13){
       let text = $('textarea').val().toLowerCase()
       handler.appendWordBreakdown(text)
