@@ -6,7 +6,7 @@ module.exports = {breakdownButton, enterKey}
 
 function breakdownButton(){
   $('button').on('click', function(){
-    let text = $('textarea').val()
+    let text = $('textarea').val().toLowerCase()
     handler.appendWordBreakdown(text)
     requests.postWords(text)
   })
@@ -16,7 +16,7 @@ function enterKey(){
   $("textarea").keypress(function(e){
     var key = e.which
     if(key === 13){
-      let text = $('textarea').val()
+      let text = $('textarea').val().toLowerCase()
       handler.appendWordBreakdown(text)
       requests.postWords(text)
     }
