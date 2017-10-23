@@ -11,7 +11,6 @@ function appendTopWord(topWord){
 function appendWordBreakdown(text){
   let counts = dataProcessor.wordCounts(text)
   $.each(counts, function( key, value ) {
-    console.log(key + ": " + value)
     $('.word-count').append('<font size="' + value + 'em">' + key + '</font>')
   });
 }

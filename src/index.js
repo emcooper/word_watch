@@ -3,5 +3,6 @@ const eventListener = require('./lib/eventListeners')
 
 document.addEventListener("DOMContentLoaded", () => {
   requests.getTopWord()
-  eventListener.breakdown()
+  eventListener.breakdownButton()
+  eventListener.enterKey()
 })
