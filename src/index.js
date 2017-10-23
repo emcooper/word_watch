@@ -1,4 +1,6 @@
+const requests = require('./lib/requests')
+
 
 document.addEventListener("DOMContentLoaded", () => {
-  // have fun!
+  requests.getTopWord()
 })
