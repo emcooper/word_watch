@@ -9,8 +9,9 @@ function appendTopWord(topWord){
 }
 
 function appendWordBreakdown(text){
+  $('.word-count').html('')
   let counts = dataProcessor.wordCounts(text)
   $.each(counts, function( key, value ) {
-    $('.word-count').append('<font size="' + value + 'em">' + key + '</font>')
+    $('.word-count').append('<p><font size="' + value + 'em">' + key + '</font></p>')
   });
 }
